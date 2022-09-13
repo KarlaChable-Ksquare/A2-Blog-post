@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 del 13Sep22</title>
+
+  <style>
+    html {
+      background: radial-gradient(circle, rgb(179, 129, 151) 0%, rgba(148, 187, 233, 1) 100%);
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+    }
+
+    * {
+
+      text-align: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      border-radius: 10px;
+      color: white
+    }
+
+    a {
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-decoration: none;
+
+    }
+
+    .history>p>a:hover {
+      background-color: rgba(0, 85, 255, 0.4);
+      transition: background-color .5s;
+    }
+
+    .history>p>a:hover {
+      background-color: rgba(8, 0, 255, 0.4);
+      transition: background-color .5s;
+    }
+
+    ul>li {
+      list-style-type: none;
+      padding: 0;
+      margin: 0
+    }
+
+    ul>li>a {
+      color: #1d0e90
+    }
+
+    .imagen_header {
+      width: 340px;
+      height: 200px;
+      border: rgb(58, 65, 141) solid 3px;
+      margin: 5px;
+    }
+
+    .title {
+      color: rgb(83, 58, 141)
+    }
+
+    .img_history {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+    }
+
+    .img_history_pic {
+      width: 250px;
+      border: rgb(58, 65, 141) solid 1px;
+      margin: 15px;
+    }
+
+    .img_food_pic {
+      width: 350px;
+      height: 200px;
+      border: rgb(58, 65, 141) dotted 3px;
+      margin: 15px;
+    }
+
+    .points>.points_table>ol>li {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    .points_table>ol>li>a:hover {
+      background-color: rgba(0, 8, 255, 0.4);
+      transition: background-color .5s;
+    }
+
+    .photo_img_pic {
+      width: 550px;
+      border: rgb(58, 65, 141)solid 3px;
+      margin: 15px;
+    }
+
+    .thanks_h2 {
+      color: white;
+      background-color: rgba(0, 8, 255, 0.4);
+      margin: 15px;
+    }
+
+    .thanks_h2:hover {
+      color: rgb(125, 105, 237);
+      background-color: #000;
+      transition: background-color .5s, color 0.5s;
+      margin: 15px;
+    }
+  </style>
+</head>
+
+<!--
+Brief history about your city
+Your favorite food from your city
+A photo about the city
+An ordered list with points of interest about your city
+Optional: Use the style attribute to change the color of each section of your blog post
+Optional: Center all the content using CSS
+-->
+<body>
+  <div class="filter">
+    <header class="header">
+
+      <h2 class="title">Mérida, Yucatán, México</h2>
+      <cite>"The White City"</cite><br />
+      <img class="imagen_header"
+        src="https://www.conarenaenlamochila.com/wp-content/uploads/2021/11/IMG_20210313_214204_1600x1060_1600x1054-1600x800.jpg"
+        alt="Picture of Mérida" />
+      <figcaption>Photo of Merida Reference Point: "Catedral de San Idelfonso"</figcaption>
+
+    </header>
+    <hr />
+    <main class="main">
+
+      <section class="history">
+        <h3 class="title">History of Merida</h3>
+        <p>Mérida was founded in 1542 by <a target="_blank" rel="noopener noreferrer"
+            href="https://es.wikipedia.org/wiki/Francisco_de_Montejo_el_Mozo">Francisco de
+            Montejo</a> “el Mozo” (the son), and built on the site of the ancient Maya city <em>T’ho</em> , meaning
+          “city
+          of five hills.” T’ho was the center of Mayan culture and activity in the <a target="_blank"
+            rel="noopener noreferrer" href="https://es.wikipedia.org/wiki/Yucat%C3%A1n">Yucatan </a>region. </p>
+
+        <p>After the
+          arrival of the Spanish, the ancient city’s five main pyramids were destroyed and their ruins used in the
+          construction of
+          Merida’s cathedral and other important buildings.</p>
+
+        <div class="img_history">
+          <img class="img_history_pic" src="https://live.staticflickr.com/4078/4775489105_72a93d5e6b_b.jpg"
+            alt="Replica palacio maya" />
+          <img class="img_history_pic"
+            src="https://th.bing.com/th/id/OIP.Evj86E8kFIj1AMKQJbZQZQHaFj?pid=ImgDet&w=1280&h=960&rs=1"
+            alt="RMonumento a la bandera" />
+          <img class="img_history_pic" src="https://s.hdnux.com/photos/60/34/07/12698073/3/1200x0.jpg"
+            alt="Edificio del Centro de Mérida" />
+        </div>
+      </section>
+      <hr />
+      <section class="food">
+        <h3 class="title">Fantastic Food!</h3>
+        <p>In Mérida we have fantastic and delicious food, for example!</p>
+
+        <div class="food_table">
+          <ul>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+                href="https://www.recetasgratis.net/receta-de-sopa-de-lima-74380.html">Sopa de Lima
+                <br />
+                <img class="img_food_pic" src="https://t1.rg.ltmcdn.com/es/posts/0/8/3/sopa_de_lima_74380_600.jpg"
+                  alt="Sopa Lima"></a>
+              <figcaption>"Mexican Lime Soup"</figcaption>
+              <br />
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer"
+                href="https://www.directoalpaladar.com.mx/comida-mexicana/queso-relleno-estilo-yucatan-receta-facil-comida-tradicional-mexicana">Queso
+                Relleno
+                <br />
+                <img class="img_food_pic" src="https://i.blogs.es/705187/12/1366_2000.jpg" alt="Queso Relleno" /></a>
+              <figcaption>"Stuffed Cheese"</figcaption>
+              <br />
+            </li>
+            <li><a target="_blank" rel="noopener noreferrer"
+                href=https://en-yucatan.com.mx/merida-yucatan/receta-mucbipollo/">Relleno Negro
+                <br />
+                <img class="img_food_pic"
+                  src="https://cocineo.com.mx/wp-content/uploads/2021/12/receta-de-relleno-negro-yucateco-500x375.png"
+                  alt="Relleno Negro" />
+              </a></li>
+            <figcaption>"Black Stuffing"</figcaption>
+            <br />
+            <li><a target="_blank" rel="noopener noreferrer" href="">Mucbipollo (Pib)
+                <br />
+                <img class="img_food_pic"
+                  src="https://cocineo.com.mx/wp-content/uploads/2021/12/receta-de-mucbipollo-yucateco.jpg" alt="Pib" />
+              </a></li>
+            <figcaption>"Mucbipollo"</figcaption>
+            <br />
+          </ul>
+        </div>
+
+
+      </section>
+      <hr />
+
+      <section class="photo">
+        <h3 class="title">Our Beautiful City</h3>
+        <p>Some beauty and classic sites...</p>
+
+        <div class="photo_img">
+          <img class="photo_img_pic"
+            src="https://lp-cms-production.imgix.net/2019-06/7b8f763d2e4eb8e1330c9bac5745e671-catedral-de-san-ildefonso.jpg?auto=format&q=40&ar=16%3A9&fit=crop&crop=center&fm=auto&w=1446"
+            alt"" />
+          <figcaption>Catedral of San Idelfonso</figcaption>
+        </div>
+      </section>
+      <hr />
+
+      <section class="points">
+        <h3 class="title">And our recomendations</h3>
+        <p>visit this nice places</p>
+        <div class="points_table">
+          <ol>
+            <li><a target="_blank" rel="noopener noreferrer"
+                href="https://visitmerida.mx/que-hacer/que-hacer/c87">Catedral San Idelfonso</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://visitmerida.mx/que-hacer/que-hacer/c576">Casa
+                de Montejo</a></li>
+            <li><a target="_blank" rel="noopener noreferrer"
+                href="https://visitmerida.mx/que-hacer/2/que-hacer/c36">Monumento a la Patria</a></li>
+            <li><a target="_blank" rel="noopener noreferrer"
+                href="https://www.inah.gob.mx/zonas/110-zona-arqueologica-de-uxmal">Uxmal</a></li>
+            <li><a target="_blank" rel="noopener noreferrer"
+                href="https://www.inah.gob.mx/zonas/146-zona-arqueologica-de-chichen-itza">Chichen Itza</a></li>
+          </ol>
+        </div>
+      </section>
+      <hr />
+      <section class="thanks">
+        <h2 class="thanks_h2">Thank you for your visit!</h2>
+      </section>
+      <hr />
+
+    </main>
+    <footer>For more information visit <a target="_blank" rel="noopener noreferrer"
+        href="https://visitmerida.mx/">Mérida</a>
+      <p>By Karla Chable</p>
+    </footer>
+
+  </div>
+</body>
+</html>
