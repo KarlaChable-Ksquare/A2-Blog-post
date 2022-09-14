@@ -16,7 +16,6 @@
     }
 
     * {
-
       text-align: center;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       border-radius: 10px;
@@ -110,6 +109,26 @@
       transition: background-color .5s, color 0.5s;
       margin: 15px;
     }
+
+    .navbar {
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-width: fit-content;
+      height: 100%;
+      background-color: rgba(233, 171, 229, 0.5);
+    }
+
+    .header_ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header_ul>li {
+      padding: 10px;
+    }
   </style>
 </head>
 
@@ -123,20 +142,34 @@ Optional: Center all the content using CSS
 -->
 <body>
   <div class="filter">
-    <header class="header">
 
-      <h2 class="title">Mérida, Yucatán, México</h2>
-      <cite>"The White City"</cite><br />
-      <img class="imagen_header"
-        src="https://www.conarenaenlamochila.com/wp-content/uploads/2021/11/IMG_20210313_214204_1600x1060_1600x1054-1600x800.jpg"
-        alt="Picture of Mérida" />
-      <figcaption>Photo of Merida Reference Point: "Catedral de San Idelfonso"</figcaption>
+    <section class="navbar" id="navbar">
+      <header class="header">
+        <ul class="header_ul">
+          <li><a class="nav-link" href="#Welkome"> Welcome to Merida </a></li>
+          <li><a class="nav-link" href="#History"> History</a></li>
+          <li><a class="nav-link" href="#Food"> Food</a></li>
+          <li><a class="nav-link" href="#Photo"> Photo</a></li>
+          <li><a class="nav-link" href="#Points"> Sites</a></li>
+          <li><a class="nav-link" href="#Thanks"> Thank You</a></li>
+        </ul>
+      </header>
+    </section>
 
-    </header>
     <hr />
     <main class="main">
+      <section class="head" id="Welkome">
+        <h2 class="title">Mérida, Yucatán, México</h2>
+        <cite>"The White City"</cite><br />
+        <img class="imagen_header"
+          src="https://www.conarenaenlamochila.com/wp-content/uploads/2021/11/IMG_20210313_214204_1600x1060_1600x1054-1600x800.jpg"
+          alt="Picture of Mérida" />
+        <figcaption>Photo of Merida Reference Point: "Catedral de San Idelfonso"</figcaption>
+      </section>
+      <hr />
 
-      <section class="history">
+
+      <section class="history" id="history">
         <h3 class="title">History of Merida</h3>
         <p>Mérida was founded in 1542 by <a target="_blank" rel="noopener noreferrer"
             href="https://es.wikipedia.org/wiki/Francisco_de_Montejo_el_Mozo">Francisco de
@@ -161,7 +194,8 @@ Optional: Center all the content using CSS
         </div>
       </section>
       <hr />
-      <section class="food">
+
+      <section class="food" id="Food">
         <h3 class="title">Fantastic Food!</h3>
         <p>In Mérida we have fantastic and delicious food, for example!</p>
 
@@ -207,7 +241,7 @@ Optional: Center all the content using CSS
       </section>
       <hr />
 
-      <section class="photo">
+      <section class="photo" id="Photo">
         <h3 class="title">Our Beautiful City</h3>
         <p>Some beauty and classic sites...</p>
 
@@ -220,7 +254,7 @@ Optional: Center all the content using CSS
       </section>
       <hr />
 
-      <section class="points">
+      <section class="points" id="Points">
         <h3 class="title">And our recomendations</h3>
         <p>visit this nice places</p>
         <div class="points_table">
@@ -239,7 +273,7 @@ Optional: Center all the content using CSS
         </div>
       </section>
       <hr />
-      <section class="thanks">
+      <section class="thanks" id="Thanks">
         <h2 class="thanks_h2">Thank you for your visit!</h2>
       </section>
       <hr />
