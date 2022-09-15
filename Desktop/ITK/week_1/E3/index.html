@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3-Survey Form</title>
+
+  <style>
+    * {
+      text-align: center;
+      margin: 10px;
+      background-color: #2A4392;
+      color: white;
+    }
+
+    body {
+      border: white dotted 3px;
+    }
+
+    main {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      text-decoration: none;
+      background-color: transparent;
+    }
+
+    a:hover {
+      color: #2A4392;
+      transition: color 0.5s;
+    }
+
+    footer>a:hover {
+      color: rgb(101, 163, 202);
+      transition: color 0.5s;
+    }
+
+    .textarea {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 75vw;
+    }
+
+    textarea {
+      background-color: whitesmoke;
+      color: black;
+      border: rgb(4, 44, 131) solid 2px;
+    }
+
+    .itk_logo {
+      width: 150px;
+      height: 70px;
+    }
+
+    .btn {
+      padding: 10px;
+      background-color: black;
+    }
+
+    .btn:hover {
+      background-color: rgb(255, 255, 255);
+      font-weight: bold;
+      transition: background-color 0.5s, font-weight 0.5s;
+    }
+
+    .gender,
+    .info {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h3>Welcome to ITK SQUARE</h3>
+    <img class="itk_logo"
+      src="https://user-images.githubusercontent.com/101657514/190224891-60606e2d-0b56-4ff3-835d-5314ff1450f4.png"
+      alt="itk" />
+    <figcaption>Push harder that yesterday if you want a different tomorrow!</figcaption>
+  </header>
+  <hr />
+  <main class="main">
+    <div class="tittle">
+      <h3>Apply today!</h3>
+    </div>
+
+    <div class="article">
+      <p>If you live in Mérida, Yucatan this's your chance</p>
+      <button class="btn"><a href="https://itk.mx/es/" target="_blank" rel="noopener noreferrer">Join us!</a></button>
+    </div>
+
+    <section>
+      <p>Complete your information</p>
+      <form class="formulario">
+        <div class="form-element">
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text" name="firstName" placeholder="Fisrt Name" />
+        </div>
+
+        <div class="form-element">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text" name="lastName" placeholder="Last Name" />
+        </div>
+
+        <div class="form-element gender">
+          <div>
+            <label for="gender">Male</label>
+            <input type="radio" id="gender" name="gender" value="Male">
+          </div>
+          <div>
+            <label for="gender">Female</label>
+            <input type="radio" id="gender" name="gender" value="Female">
+          </div>
+
+        </div>
+
+        <div class="form-element">
+          <label for="age">Age</label>
+          <input type="number" name="age" id="age" required placeholder="Age" />
+
+          <div class="form-element">
+            <label for="phone">Celphone</label>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+              placeholder="999-101-6020" />
+          </div>
+    </section>
+
+    <section>
+      <div class="form-element">
+        <label for="select">Career to apply</label>
+        <select id="select" name="select">
+          <option value="">Career</option>
+          <option value="Flutter">Flutter</option>
+          <option value="Javascript">Javascript</option>
+          <option value="Salesforce">Salesforce</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <div class="form-element">
+        <p>Do you wants more information?</p>
+        <div class="info">
+          <label><input type="checkbox" id="box1" value="yes"> Yes/Si</label><br>
+          <label><input type="checkbox" id="box2" value="no"> No</label><br>
+        </div>
+      </div>
+    </section>
+    </form>
+    </section>
+
+
+    <div class="textarea">
+      <label for="textarea">Comments</label>
+      <textarea name="comment" id="textarea" cols="20" rows="10" placeholder="Give us your opinion"></textarea>
+    </div>
+
+
+
+
+
+
+
+
+  </main>
+  <footer>
+    <a class="footer_a" href="https://www.instagram.com/lukitachan/" target="_blank" rel="noopener noreferrer"> By Karla
+      Chable</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3, 14-sept-2022</title>
+
+  <style>
+    * {
+      text-align: center;
+      margin: 10px;
+      background-color: black;
+      color: white;
+    }
+
+    body {
+      border: white dotted 3px;
+    }
+
+    .lorem {
+      color: aqua
+    }
+
+    .textarea {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .nav-link-btn {
+      color: rgb(255, 0, 136);
+
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-foot {
+      border-radius: 25%;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <h3>This's a lesson: Hello World!</h3>
+
+  <main class="main">
+    <p>This's a main contain</p>
+
+    <div class="article">This's article inside in my main contain</div>
+
+    <div class="article lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nobis doloremque dolor
+      excepturi, blanditiis at itaque debitis incidunt cupiditate, corporis quae recusandae libero doloribus iste
+      molestias labore tempora voluptatum eum!</div>
+    <hr />
+    <section>
+      <h4>Form</h4>
+      <form class="formulario">
+        <div class="form-element">
+          <label for="first-name">First Name</label>
+          <input id="first-name" type="text" name="firstName" />
+        </div>
+
+        <div class="form-element">
+          <label for="last-name">Last Name</label>
+          <input id="last-name" type="text" name="lastName" />
+        </div>
+
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+
+        <div class="form-element">
+          <label for="select-of-children">Week</label>
+          <select id="select-of-children" name="selectChildren">
+            <option value="">Dia de la Semana</option>
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miercoles">Miercoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+            <option value="Sabado">Sabado</option>
+            <option value="Domingo">Domingo</option>
+          </select>
+        </div>
+      </form>
+    </section>
+
+    <hr />
+
+    <div class="form-element textarea">
+      <h4>Textarea</h4>
+      <label for="textarea">Comments</label>
+      <textarea name="comment" id="textarea" cols="20" rows="10"></textarea>
+    </div>
+    <hr />
+
+    <div class="form-element">
+      <h4>Progress</h4>
+      <label for="file">File progress:</label>
+
+      <progress class="progress" id="file" max="100" value="55"> 70% </progress>
+    </div>
+
+
+
+
+    <hr />
+  </main>
+  <footer>
+    <p>Footer :D</p>
+    <a href="https://www.instagram.com/lukitachan/" target="_blank" rel="noopener noreferrer">Karla Chable</a>
+
+    <button class="btn-foot" style="border-radius: 15%;">
+      <nav class="nav_ul" style="background-color:transparent">
+        <a class="nav-link-btn"
+          style="text-decoration: none;font-weight: bold;color: rgb(255, 0, 136);background-color:transparent; border-radius: 15%;"
+          href="../index.html"> Index
+        </a>
+      </nav>
+    </button>
+  </footer>
+
+</body>
+</html>

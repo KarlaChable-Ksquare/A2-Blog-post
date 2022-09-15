@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: 'Montserrat', sans-serif;
+      text-align: center;
+    }
+
+    html {
+      background: radial-gradient(circle, rgb(129, 137, 179) 0%, rgb(39, 128, 229) 100%);
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      color: rgb(0, 0, 0);
+    }
+
+    .nav-link {
+      padding: 0 15px;
+    }
+
+    a {
+      color: blue;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgba(138, 198, 254, 0.8);
+      background-color: rgb(72, 44, 137);
+      border-radius: 5px;
+      text-shadow: 2px 2px #0803321d;
+      transition: color 0.5s, background-color 0.5s, border-radius 0.5s,
+        text-shadow 0.5s;
+    }
+
+    #name {
+      /* background-color: whitesmoke; */
+      font-size: 12px;
+    }
+
+    .pic_header {
+      width: 150px;
+      height: 150px;
+      border-radius: 10%;
+    }
+
+    #pic_shizue:hover {
+      color: transparent;
+      background-color: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      transition: color 0.5s, background-color 0.5s, border-radius 0.5s;
+    }
+  </style>
+
+  <title>Week 1</title>
+</head>
+<body>
+  <header>
+    <h3>Lessons</h3>
+    <h5>September 2022 - March 2023</h5>
+
+    <a id="pic_shizue" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/lukitachan/">
+      <img class="pic_header" src="https://i.ibb.co/9WQp2G3/Whats-App-Image-2022-09-15-at-11-58-24-AM.jpg" alt="shizue"
+        border="0" />
+    </a>
+  </header>
+  <main>
+    <h4>Cointain</h4>
+    <div>
+      <p>12 september to 16 september</p>
+      <nav class="nav_ul">
+        <a class="nav-link" href="./html/lesson1.html"> Lesson 1 </a>
+        <a class="nav-link" href="./html/lesson3.html"> Lesson 3</a>
+        <a class="nav-link" href="./html/lesson4.html"> Lesson 4</a>
+      </nav>
+    </div>
+
+  </main>
+  <footer>
+    <div>
+      <p id="name">By Karla Chable</p>
+    </div>
+  </footer>
+</body>
+</html>
