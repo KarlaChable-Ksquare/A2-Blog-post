@@ -6,9 +6,9 @@ main {
   top: 0;
   bottom: 0;
   display: flex;
-  background-color: whitesmoke;
+  background-color: white;
+  /*border: solid 3px white;*/
   border-radius: 15px;
-  /*border: solid 5px gray;*/
   margin: 35px;
 }
 
@@ -177,7 +177,7 @@ div.free > a.for_free {
 /* Parte Derecha*/
 
 section.right-side {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: lighter;
 
   background-image: url("https://t4.ftcdn.net/jpg/02/66/90/39/360_F_266903979_vS5xvm2klxDBvfMthe2d36YjkzWqWqbI.jpg");
@@ -187,6 +187,9 @@ section.right-side {
   position: relative;
   width: 50vw;
   height: 87vh;
+
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
 
   display: flex;
   flex-direction: column;
@@ -211,15 +214,10 @@ section.right-side {
 }
 
 .contenedor_0_inside > div {
-  /*border: solid 1px rgb(110, 8, 8, 0.25);*/
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   align-items: center;
-}
-
-.contenedor_0_inside > div > content {
-  /*border: solid 1px rgb(110, 8, 8, 0.5);*/
 }
 
 div.contenedor_0_inside > div.stars_full > content.stars-left {
@@ -248,7 +246,7 @@ button.btns-lr {
 }
 
 i {
-  color: rgb(198, 198, 198, 0.2);
+  color: rgba(249, 249, 249, 0.8);
 }
 
 content.stars-right > label.stars-inside > i:hover {
