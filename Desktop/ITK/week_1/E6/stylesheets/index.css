@@ -8,13 +8,13 @@ main {
   top: 0;
   bottom: 0;
   display: flex;
-  background-color: whitesmoke;
+  background-color: rgba(168, 36, 36, 0.2);
   border: solid 5px gray;
   border-radius: 20px;
   margin: 35px;
 }
 
-section * {
+section.left-side * {
   background-color: whitesmoke;
   border-radius: 15px;
 }
@@ -33,7 +33,6 @@ label {
 a {
   text-decoration: none;
   color: black;
-  /*background-color: transparent;*/
 }
 
 input:hover {
@@ -49,6 +48,8 @@ button:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.5s;
 }
+
+/* Parte Izquierda*/
 
 .left-side {
   display: flex;
@@ -105,17 +106,18 @@ div.formulario > form.form > div.formu > input {
   border-color: rgba(128, 128, 128, 0.5);
 }
 
-.bg_black {
+div.button > div.button_inside > button.bg_black {
   background-color: black;
   color: white;
 }
 
-.sign_acc {
+a.sign_acc {
   background-color: transparent;
+  color: white;
 }
 
-.bg_black:hover {
-  background-color: rgba(8, 0, 255, 0.8);
+div.button > div.button_inside > button.bg_black:hover {
+  background-color: #395bc7;
   transition: background-color 0.5s;
 }
 
@@ -164,8 +166,21 @@ div.free > a.for_free {
   }
 }
 
-.img_tloz {
-  width: 250px;
+/* Parte Derecha*/
+
+.right-side {
+  background-image: url("https://i.ibb.co/sbZnGJR/tloz-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 50vw;
+  height: 90vh;
+}
+
+.contenedor_0_inside {
+  border: solid 5px grey;
+  background-color: rgba(245, 245, 245, 0.4);
 }
 
 .stars {
