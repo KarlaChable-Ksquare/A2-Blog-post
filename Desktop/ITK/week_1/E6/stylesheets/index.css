@@ -10,10 +10,16 @@ main {
   /*border: solid 3px white;*/
   border-radius: 15px;
   margin: 35px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1#tittle,
+div.formulario > form.form > div.formu > label,
+div.check > div.check_box > label#box2 {
+  font-weight: bold;
 }
 
 section.left-side * {
-  font-family: "Open Sans", sans-serif;
   background-color: whitesmoke;
 }
 
@@ -55,6 +61,11 @@ button.sign:hover,
 button.google:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.5s;
+}
+
+section.left-side > div.contenedor > div.head > p,
+section.left-side > div.contenedor > div.free > p {
+  color: grey;
 }
 
 /* Parte Izquierda*/
@@ -177,9 +188,6 @@ div.free > a.for_free {
 /* Parte Derecha*/
 
 section.right-side {
-  font-family: "Open Sans", sans-serif;
-  font-weight: lighter;
-
   background-image: url("https://t4.ftcdn.net/jpg/02/66/90/39/360_F_266903979_vS5xvm2klxDBvfMthe2d36YjkzWqWqbI.jpg");
   background-position: center;
   background-repeat: no-repeat;
