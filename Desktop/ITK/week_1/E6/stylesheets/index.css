@@ -1,28 +1,26 @@
 html {
-  background-color: grey;
-  /*font-family: "Open Sans", sans-serif;*/
-  font-family: sans-serif;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 
 main {
   top: 0;
   bottom: 0;
   display: flex;
-  background-color: rgba(168, 36, 36, 0.2);
-  border: solid 5px gray;
-  border-radius: 20px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  /*border: solid 5px gray;*/
   margin: 35px;
 }
 
 section.left-side * {
+  font-family: "Open Sans", sans-serif;
   background-color: whitesmoke;
-  border-radius: 15px;
 }
 
 section {
   width: 50vw;
   /*border-radius: 15px;*/
-  border: solid 2px rgba(216, 112, 147, 0.5);
+  /*border: solid 2px rgba(216, 112, 147, 0.5);*/
   justify-content: space-evenly;
 }
 
@@ -35,6 +33,15 @@ a {
   color: black;
 }
 
+h1 {
+  font-size: x-large;
+}
+
+cite {
+  font-size: large;
+  font-weight: bold;
+}
+
 input:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.5s;
@@ -44,7 +51,8 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button.sign:hover,
+button.google:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.5s;
 }
@@ -66,7 +74,6 @@ button:hover {
 .form_pass {
   display: flex;
   flex-direction: column;
-  padding: 0px 10px;
 }
 
 form > div {
@@ -84,6 +91,7 @@ form > div {
 }
 
 .check > .check_box {
+  padding: 5px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -168,21 +176,87 @@ div.free > a.for_free {
 
 /* Parte Derecha*/
 
-.right-side {
-  background-image: url("https://i.ibb.co/sbZnGJR/tloz-01.jpg");
+section.right-side {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: lighter;
+
+  background-image: url("https://t4.ftcdn.net/jpg/02/66/90/39/360_F_266903979_vS5xvm2klxDBvfMthe2d36YjkzWqWqbI.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   width: 50vw;
-  height: 90vh;
+  height: 87vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.contenedor_0_inside {
-  border: solid 5px grey;
-  background-color: rgba(245, 245, 245, 0.4);
+.contenedor_0 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(192, 192, 192, 0.8);
+  backdrop-filter: blur(5px);
+  background-color: rgba(120, 113, 113, 0.1);
+  display: flex;
+  flex-direction: column;
+  /*border: solid 1px grey;*/
+  margin: 2rem;
+  padding: 1rem 2rem;
 }
 
-.stars {
-  color: pink;
+.testimonio {
+  padding: 5px 0px;
+}
+
+.contenedor_0_inside > div {
+  /*border: solid 1px rgb(110, 8, 8, 0.25);*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor_0_inside > div > content {
+  /*border: solid 1px rgb(110, 8, 8, 0.5);*/
+}
+
+div.contenedor_0_inside > div.stars_full > content.stars-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.contenedor_0_inside > div.stars_full > content.stars-right {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.stars-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button.btns-lr {
+  border: transparent;
+  background-color: transparent;
+}
+
+i {
+  color: rgb(198, 198, 198, 0.2);
+}
+
+content.stars-right > label.stars-inside > i:hover {
+  color: #395bc7;
+  transition: color 0.5s;
+}
+
+.btns-lr > i:hover {
+  color: #395bc7;
+  transition: color 0.5s;
 }
