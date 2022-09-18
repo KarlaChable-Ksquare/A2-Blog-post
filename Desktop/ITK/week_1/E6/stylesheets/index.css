@@ -38,16 +38,6 @@ a {
   text-decoration: none;
   color: black;
 }
-
-h1 {
-  font-size: x-large;
-}
-
-cite {
-  font-size: large;
-  font-weight: bold;
-}
-
 input:hover {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.5s;
@@ -207,18 +197,23 @@ section.right-side {
 
 .contenedor_0 {
   color: rgb(255, 255, 255);
-  text-shadow: 2px 2px rgb(192, 192, 192, 0.8);
+  text-shadow: 2px 2px rgb(192, 192, 192, 0.3);
   backdrop-filter: blur(5px);
   background-color: rgba(120, 113, 113, 0.1);
   display: flex;
   flex-direction: column;
   /*border: solid 1px grey;*/
-  margin: 2rem;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+}
+
+section.right-side > div.contenedor_0 * {
+  margin: 2px;
 }
 
 .testimonio {
-  padding: 5px 0px;
+  padding: 0px 0px;
+  /*border: solid 1px grey;*/
 }
 
 .contenedor_0_inside > div {
@@ -265,4 +260,18 @@ content.stars-right > label.stars-inside > i:hover {
 .btns-lr > i:hover {
   color: #395bc7;
   transition: color 0.5s;
+}
+
+#test_h {
+  margin: 0;
+  font-weight: normal;
+}
+
+h3#name {
+  font-size: 1.3rem;
+}
+
+#puesto,
+#job {
+  font-weight: lighter;
 }
