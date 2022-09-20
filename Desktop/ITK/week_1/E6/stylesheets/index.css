@@ -204,7 +204,7 @@ section.right-side {
   flex-direction: column;
   /*border: solid 1px grey;*/
   padding: 0.5rem 1.5rem;
-  margin: 1rem;
+  margin: 2rem;
 }
 
 section.right-side > div.contenedor_0 * {
