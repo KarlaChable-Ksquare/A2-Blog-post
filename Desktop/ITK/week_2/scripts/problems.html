@@ -1,0 +1,237 @@
+<script>
+  /* Exercise I - C to FAssignment*/
+  const cToF = (c) => {
+    /* Only make changes below this comment */
+    if (typeof c === "number" && c !== undefined) {
+      let farh = (c * 9) / 5 + 32;
+      return farh;
+    } else {
+      return "Please only number for 'c'";
+    }
+    /* Only make changes below this comment */
+  };
+  console.log(cToF());
+  //console.log(cToF(100));
+  //console.log(cToF(0));
+  //console.log(cToF("100"));
+
+  /* Exercise II - Palindrome checker (easy mode)Assignment */
+  const palindrome = (str) => {
+    /* Only make changes below this comment */
+    if (!str) {
+      return console.warn("Enter a string");
+    } else if (typeof str !== "string") {
+      return console.warn("Only string values");
+    } else if (str.length === 1) {
+      return console.warn("lengh of string need be more that 1 character");
+    } else {
+      str = str.toLowerCase();
+      let stringBack = str.replace(/ /g, "").split("").reverse().join("");
+      stringNoE = str.replace(/ /g, "");
+
+      return stringNoE === stringBack //true
+        ? true
+        : false;
+    }
+    /* Only make changes below this comment */
+  };
+  console.log(palindrome("Anita Lava la Tina"));
+  console.log(palindrome("a"));
+  console.log(palindrome("race a car"));
+  console.log(palindrome("madam"));
+  console.log(palindrome("taco cat"));
+  console.log(palindrome("noon"));
+  console.log(palindrome("almost a palindrome"));
+
+  const palindrom3 = (str) => {
+    /* Only make changes below this comment */
+    //first write to lower case the string and re-assign the variable.
+    str = str.toLowerCase();
+    // for 'stringBack' we replace blank spaces (for nothing ""), next convert string to array, for reverse it and join again all letters for .
+    let stringBack = str.replace(/ /g, "").split("").reverse().join("");
+    //addition we create other variable called "stringNoS" (string without spaces) then replace blank spaces for nothing ("") and create 1 word for comparate it.
+    stringNoS = str.replace(/ /g, "");
+    //first evaluation; if 'str' not exist we send a warning.
+    if (!str) {
+      return console.warn("Only string characters");
+      //second evaluation; besides if "str" not is a "string" type we send another warning.
+    } else if (typeof str !== "string") {
+      return console.warn("Only string values");
+      //third evaluation; for cases of "str" lenght ir less or equal to 1 we can't evaluate the word, for that we send a "false"
+    } else if (str.lenght <= 1) {
+      return false;
+      //for case that all works fine, we comparate our 2 variables:
+    } else {
+      return stringNoS === stringBack
+        ? true //if are equals
+        : false; //or not equals
+    }
+    /* Only make changes below this comment */
+  };
+  /*console.log(palindrom3("Anita Lava la Tina"));
+  console.log(palindrom3("a"));
+  console.log(palindrom3("race a car"));
+  console.log(palindrom3("madam"));
+  console.log(palindrom3("taco cat"));
+  console.log(palindrom3("noon"));
+  console.log(palindrom3("almost a palindrome"));*/
+
+
+  /* Exercise III - You shall not passAssignment */
+  const youShallNotPass = (arr) => {
+    /* Only make changes below this comment */
+
+    //first evaluation, if "arr" not exist we send a warning or a second evaluation, for cases when arr is not a Array element we return a warning.
+    if (!arr || !Array.isArray(arr)) {
+      return console.warn("Please input a array");
+    } else {
+      //if all it's ok, we filter the array deleting all boolean values and return them in a new value "arrFilter"
+      var arrFilter = arr.filter(Boolean);
+      return arrFilter;
+    }
+
+    /* Only make changes below this comment */
+  };
+  /*console.log(youShallNotPass("alg0"));
+  console.log(youShallNotPass([false, null, "", 0])); //[]
+  console.log(youShallNotPass(["hello world!", NaN, undefined, 1, 2])); //['hello world!', 1, 2]
+  console.log(youShallNotPass([10, false, "", "pass"])); //[10, 'pass']*/
+
+  /** DO NOT CHANGE THE LINE BELOW **/
+
+  const youShallNotPassy = (arr) => {
+    /* Only make changes below this comment */
+    let arrFilter = [];
+    //first evaluation, if "arr" not exist we send a warning or a second evaluation, for cases when arr is not a Array element we return a warning.
+    if (!arr || !Array.isArray(arr)) {
+      return console.warn("Please input a array");
+    } else {
+      //if all it's ok,
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i]) {
+          arrFilter.push(arr[i]);
+        }
+      }
+      return arrFilter;
+    }
+    /* Only make changes below this comment */
+  };
+  //console.log(youShallNotPass("alg0"));
+  console.log(youShallNotPassy([false, null, "", 0])); //[]
+  console.log(youShallNotPassy(["hello world!", NaN, undefined, 1, 2])); //['hello world!', 1, 2]
+  console.log(youShallNotPassy([10, false, "", "pass"])); //[10, 'pass']
+
+  /** DO NOT CHANGE THE FUNCTION NAME **/
+
+  /* Exercise IV - Pair the sumAssignment */
+  const pairTheSum = (numbers, target) => {
+    let res = false;
+    /* Only make changes below this comment */
+    if (!numbers || !target) {
+      console.warn("Please input any array or target values");
+    } else if (typeof target !== "number") {
+      console.warn("Please only number values for target");
+    }
+
+    for (let i = 0; i < numbers.length; i++) {
+      for (let j = 1; j < numbers.length; j++) {
+        if (typeof numbers[i] !== "number" || typeof numbers[j] !== "number") {
+          return console.warn("Please only number values in array");
+        } else if (typeof target !== "number") {
+          return console.warn("Please input target value");
+        } else {
+          let add = numbers[i] + numbers[j];
+          if (add === target) {
+            return (res = true);
+          }
+        }
+      }
+    }
+    /* Only make changes below this comment */
+    return res;
+  };
+  //console.log(pairTheSum([])); //
+  //console.log(pairTheSum(["Anna", 8])); //
+  //console.log(pairTheSum([5, 7, 2], 9)); //true
+  //console.log(pairTheSum([2, 9, 1], 8)); //false
+  //console.log(pairTheSum([3, 3], 6)); //true
+  //console.log(pairTheSum([2, 11, 8, 7], 9)); //true
+  //console.log(pairTheSum([3, 4, 5, 6], 2)); //false
+
+  /** DO NOT CHANGE THE LINE BELOW **/
+
+  /* Exercise V - Flat as the floorAssignment */
+  const flatten = (arr) => {
+    /* Only make changes below this comment */
+    let arrFlat = arr.reduce(
+      (acc, val) =>
+        Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val),
+      []
+    );
+    return arrFlat;
+    /* Only make changes below this comment */
+  };
+  //console.log(flatten([])); //
+  //console.log(flatten([1, {}, [3, [[4]]]])); //([1, {}, 3, 4]);
+  console.log(flatten([1, [], [3, [[4]]]])); //([1, 3, 4]);
+
+  const flatteny = (arr) => {
+    /* Only make changes below this comment */
+
+    //We asign a new variable for storage our new flatten array.
+    let newArrFlatted = [];
+
+    if (!arr) { //Validation if "arr" exist (true); in case that result false we send a warning.
+      return console.warn('Please input any value in a array')
+    } else if (!Array.isArray(arr)) { //validation in case that "arr" not be a Array, we send another alert.
+      return console.warn('First write a array')
+    } else {
+      //if "arr" exist (true) and is a Array, we do a cicle for-of for iterate our array values.
+      for (const indexValue of arr) {
+        /* case true for array. Per value of index (indexValue) we evaluate if is a Array (sub-array in "arr") and if that it's True then our new array (newArrFlatted) the result of evaluate itself (recursive function) for next that merge it (concat) to "newArrFlatted" */
+        if (Array.isArray(indexValue)) {
+          newArrFlatted = newArrFlatted.concat(flatteny(indexValue));
+        } else {
+          //opposite case, when all values of arr ("indexValue") not be sub-arrays, then we can push them in the new array.
+          newArrFlatted.push(indexValue);
+        }
+      }
+      //and return it.
+      return newArrFlatted;
+    }
+    /* Only make changes below this comment */
+  };
+  (flatteny("no array")); //
+  console.log(flatten([])); //
+  console.log(flatten([1, {}, [3, [[4]]]])); //([1, {}, 3, 4]);
+  console.log(flatteny([1, [], [3, [[4]]]])); //([1, 3, 4]);
+
+
+  /* Exercise VI - Cypher */
+
+
+  /*                              :v */
+  /* 
+  You are given an array with numbers (only integers), you need to return the first triple that meets the following requirement [arr[i], arr[j], arr[k] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+  
+  Example:
+  Input: arr = [-1,0,1,2,-1,4]
+  Output: [-1,-1,2]
+  */
+
+  const triple = (arr) => {
+    let ijkArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 1; j < arr.length; j++) {
+        for (let k = 2; k < arr.length; k++) {
+          if (arr[i] !== arr[j] && arr[j] !== arr[k] && arr[j] !== arr[k]) {
+            ijk = arr[i] + arr[j] + arr[k];
+            console.log(`${arr[i]} + ${arr[j]} + ${arr[k]} = ${ijk}`);
+            ijk.push([arr[i], arr[j], arr[k]]);
+          }
+        }
+      }
+    }
+  };
+//console.log(triple([-1, 0, 1, 2, -1, 4])); //[-1,-1,2] or [-1, 0, 1]
+</script>

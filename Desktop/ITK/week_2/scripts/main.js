@@ -49,146 +49,8 @@ myPockMe2.addEventListener("click", function () {
   alert("Duh! Stop poking me please!");
 });
 
-// * * * * * //
-
-const cToF = (c) => {
-  /* Only make changes below this comment */
-  if (typeof c === "number" && c !== undefined) {
-    let farh = (c * 9) / 5 + 32;
-    return farh;
-  } else {
-    return "Please only number for 'c'";
-  }
-  /* Only make changes below this comment */
-};
-//console.log(cToF());
-//console.log(cToF(100));
-//console.log(cToF(0));
-//console.log(cToF("100"));
-
-// const palindrome = (str) => {
-//   /* Only make changes below this comment */
-//   if (!str) {
-//     return console.warn("Enter a string");
-//   } else if (typeof str !== "string") {
-//     return console.warn("Only string values");
-//   } else if (str.length === 1) {
-//     return console.warn("lengh of string need be more that 1 character");
-//   } else {
-//     str = str.toLowerCase();
-//     let stringBack = str.replace(/ /g, "").split("").reverse().join("");
-//     stringNoE = str.replace(/ /g, "");
-
-//     return stringNoE === stringBack //true
-//       ? true
-//       : false;
-//   }
-//   /* Only make changes below this comment */
-// };
-// console.log(palindrome("Anita Lava la Tina"));
-// console.log(palindrome("a"));
-// console.log(palindrome("race a car"));
-// console.log(palindrome("madam"));
-// console.log(palindrome("taco cat"));
-// console.log(palindrome("noon"));
-// console.log(palindrome("almost a palindrome"));
-
-const palindrome = (str) => {
-  /* Only make changes below this comment */
-  //first write to lower case the string and re-assign the variable.
-  str = str.toLowerCase();
-  // for 'stringBack' we replace blank spaces (for nothing ""), next convert string to array, for reverse it and join again all letters for .
-  let stringBack = str.replace(/ /g, "").split("").reverse().join("");
-  //addition we create other variable called "stringNoS" (string without spaces) then replace blank spaces for nothing ("") and create 1 word for comparate it.
-  stringNoS = str.replace(/ /g, "");
-  //first evaluation; if 'str' not exist we send a warning.
-  if (!str) {
-    return console.warn("Only string characters");
-    //second evaluation; besides if "str" not is a "string" type we send another warning.
-  } else if (typeof str !== "string") {
-    return console.warn("Only string values");
-    //third evaluation; for cases of "str" lenght ir less or equal to 1 we can't evaluate the word, for that we send a "false"
-  } else if (str.lenght <= 1) {
-    return false;
-    //for case that all works fine, we comparate our 2 variables:
-  } else {
-    return stringNoS === stringBack
-      ? true //if are equals
-      : false; //or not equals
-  }
-  /* Only make changes below this comment */
-};
-//console.log(palindrome("Anita Lava la Tina"));
-//console.log(palindrome("a"));
-//console.log(palindrome("race a car"));
-//console.log(palindrome("madam"));
-//console.log(palindrome("taco cat"));
-//console.log(palindrome("noon"));
-//console.log(palindrome("almost a palindrome"));
-
-const youShallNotPass = (arr) => {
-  /* Only make changes below this comment */
-
-  //first evaluation, if "arr" not exist we send a warning or a second evaluation, for cases when arr is not a Array element we return a warning.
-  if (!arr || !Array.isArray(arr)) {
-    return console.warn("Please input a array");
-  } else {
-    //if all it's ok, we filter the array deleting all boolean values and return them in a new value "arrFilter"
-    var arrFilter = arr.filter(Boolean);
-    return arrFilter;
-  }
-
-  /* for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "boolean")
-  }*/
-  /* Only make changes below this comment */
-};
-/*console.log(youShallNotPass("alg0"));
-console.log(youShallNotPass([false, null, "", 0])); //[]
-console.log(youShallNotPass(["hello world!", NaN, undefined, 1, 2])); //['hello world!', 1, 2]
-console.log(youShallNotPass([10, false, "", "pass"])); //[10, 'pass']*/
-
-/** DO NOT CHANGE THE LINE BELOW **/
-
-/** DO NOT CHANGE THE FUNCTION NAME **/
-const pairTheSum = (numbers, target) => {
-  let res = false;
-  /* Only make changes below this comment */
-  if (!numbers || !target) {
-    console.warn("Please input any array or target values");
-  } else if (typeof target !== "number") {
-    console.warn("Please only number values for target");
-  }
-
-  for (let i = 0; i < numbers.length; i++) {
-    for (let j = 1; j < numbers.length; j++) {
-      if (typeof numbers[i] !== "number" || typeof numbers[j] !== "number") {
-        return console.warn("Please only number values in array");
-      } else if (typeof target !== "number") {
-        return console.warn("Please input target value");
-      } else {
-        let add = numbers[i] + numbers[j];
-        if (add === target) {
-          return (res = true);
-        }
-      }
-    }
-  }
-  /* Only make changes below this comment */
-  return res;
-};
-//console.log(pairTheSum([])); //
-//console.log(pairTheSum(["Anna", 8])); //
-//console.log(pairTheSum([5, 7, 2], 9)); //true
-//console.log(pairTheSum([2, 9, 1], 8)); //false
-//console.log(pairTheSum([3, 3], 6)); //true
-//console.log(pairTheSum([2, 11, 8, 7], 9)); //true
-//console.log(pairTheSum([3, 4, 5, 6], 2)); //false
-
-/** DO NOT CHANGE THE LINE BELOW **/
-
 let footbar;
-console.log(footbar);
+//console.log(footbar);
 footbar = "hola mundo!";
 
 //Boolean, T-F, 0-1
@@ -204,7 +66,7 @@ footbar = "hola mundo!";
 const bigint = 1234567890123456789012345678901234567890n;
 const sameBigint = BigInt("1234567890123456789012345678901234567890");
 const bigintFromNumber = BigInt(10);
-console.log(bigintFromNumber); // lo mismo que 10n.
+//console.log(bigintFromNumber); // lo mismo que 10n.
 
 let varA = "";
 let varB = 0;
@@ -213,7 +75,7 @@ let varC = true || false;
 //let varD = 5 + "47";
 let varD = 5 + parseInt("hola");
 //NaN: es un valor que representa Not-A-Number.
-console.log(varD);
+//console.log(varD);
 
 /* Literals: Objects and Arrays */
 /*  
@@ -230,3 +92,93 @@ There are two types of object properties: The data property and the accessor pro
 const obj = {
   key: "value",
 };
+
+/* 21 de Septiembre de 2022, Leccion de la Mañana: Control Flow */
+//Expression.
+let x;
+x = 4;
+console.log(x);
+//console.log(3 + x);
+//x = 3 + x;
+console.log(x);
+
+/* y = 4;
+x += 1; //y = y + 1
+x -= 1; //y = y - 1
+x *= 2; //y = y * 2
+//x /= 2; //y = y / 2
+x %= 2; // module
+x **= 2; //y = y ** 2  Exponentiation assignment
+console.log(`El valor de y es ${y}`); */
+
+x = -0;
+if (x) {
+  console.log(`El valor de x es ${x}, True`);
+} else if (x === 0) {
+  console.log(`El valor de x es ${x}, False`);
+}
+
+//console.log("42" == 42);
+/* 
+The difference between == and === is that:
+== converts the variable values to the same type before performing comparison. This is called type coercion.
+=== does not do any type conversion (coercion) and returns true only if both values and types are identical for the two variables being compared.
+*/
+console.log("42" === 42); //strict equality.
+
+const arrayK = [1, 2, 3, 4, 5];
+let arrIndexK = [];
+for (let k = 0; k < arrayK.length; k++) {
+  arrIndexK.push(arrayK[k]);
+}
+console.log(arrIndexK);
+
+let z = "";
+z = "Hello!";
+switch (z) {
+  case "Hello!":
+    z = "Hola";
+    break;
+
+  case "Bye!":
+    z = "Adios";
+    break;
+
+  default: //
+    //console.log(z);
+    break;
+}
+console.log(z);
+
+//Operador ternario.
+z === "Hola" ? (f = 10) : (f = 25);
+//throw "True";
+console.log(f);
+
+const evalN = (grade) => {
+  if (grade >= 85) {
+    return "Good Job!";
+  } else {
+    throw new Error("You shall no pass");
+  }
+};
+console.log(evalN(95));
+
+try {
+  const feedBack = evalN(84);
+  console.log(feedBack);
+} catch (error) {
+  console.log(error);
+  //throw new Error("anteater");
+} finally {
+  console.log("Anything that you wants ;)");
+}
+console.log("Life goes on man!");
+
+let myVar = "Holita!";
+try {
+  console.log(myVar);
+} catch (error) {
+  console.error(error);
+  console.log("i can continue to write code");
+}
