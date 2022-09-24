@@ -90,11 +90,11 @@ section > #startBtn:hover {
   transform: translateY(-4px);
 }
 
-.light {
+.glowUp {
   background-color: rgba(245, 245, 245, 0.2) !important;
 }
 
-.hide {
+.hideIt {
   display: none !important;
 }
 

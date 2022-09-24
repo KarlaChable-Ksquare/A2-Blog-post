@@ -1,12 +1,13 @@
 console.log("Live reloading");
-//constantes y variables
-const startBtn = document.getElementById("startBtn");
+//Buttons
 const purple = document.getElementById("purple");
 const greenyellow = document.getElementById("greenyellow");
 const palevioletred = document.getElementById("palevioletred");
 const yellow = document.getElementById("yellow");
+const startBtn = document.getElementById("startBtn");
 
-const colores = {
+//Colection of colors
+const colorsChoise = {
   purple,
   greenyellow,
   palevioletred,
@@ -14,61 +15,63 @@ const colores = {
 };
 
 //Secuencia
-let secuencia = [];
-let nivel = 0;
-let subnivel = 0;
-const ultimo = 20;
-const espera = 750;
-const esperaMedia = 1500;
-const eliminarColor = 350;
-const numColores = 4;
+let sequence = [];
+let levels = 0;
+let sublevels = 0;
+const stages = 20;
+const numberPGPY = 4;
+
+//timers
+const waiting = 600;
+const mediumWait = 1200;
+const hideColor = 350;
 
 //Inicio del juego.
-function playGame() {
+const playGame = () => {
   //Secuencia para los botones
-  secuencia = new Array(ultimo);
-  secuencia = secuencia.fill(0);
-  secuencia = secuencia.map((element) =>
-    Math.floor(Math.random() * numColores)
-  );
-  nivel = 0;
-  subnivel = 0;
+  sequence = new Array(stages);
+  //sequence = sequence.fill(0);
+  sequence = sequence
+    .fill(0)
+    .map((pattern) => Math.floor(Math.random() * numberPGPY));
+  levels = 0;
+  sublevels = 0;
 
-  //preparamos la interfaz
-  startBtn.classList.add("hide");
+  //Escondemos el boton de inicio.
+  startBtn.classList.add("hideIt");
 
-  //primer secuencia del juego.
-  iluminarSecuencia();
-}
+  //Se iluminan el patron random.
+  lightUpPattern();
+};
 
 //final de juego
-function endGame() {
-  startBtn.classList.remove("hide");
-  nivel = -1;
-}
+const endGame = () => {
+  startBtn.classList.remove("hideIt");
+  levels = -1;
+};
 
 //Secuencia de iluminacion actual
-function iluminarSecuencia() {
-  for (let index = 0; index <= nivel; index++) {
-    const color = transformarNumeroAColor(secuencia[index]);
-    setTimeout(() => iluminarColor(color), espera * index);
+const lightUpPattern = () => {
+  for (let index = 0; index <= levels; index++) {
+    const color = numberToColor(sequence[index]);
+    setTimeout(() => glowUpPattern(color), waiting * index);
   }
-}
+};
 
 //iluminar color especificado
-function iluminarColor(color) {
-  colores[color].classList.add("light");
-  setTimeout(() => apagarColor(color), eliminarColor);
-}
+const glowUpPattern = (color) => {
+  colorsChoise[color].classList.add("glowUp");
+  setTimeout(() => turnOffPattern(color), hideColor);
+};
 
 //apagar boton especificado
-function apagarColor(color) {
-  colores[color].classList.remove("light");
-}
+const turnOffPattern = (color) => {
+  colorsChoise[color].classList.remove("glowUp");
+};
 
 //recuperar el color utilizando la posicion indicada
-function transformarNumeroAColor(numero) {
-  switch (numero) {
+const numberToColor = (index) => {
+  switch (index) {
     case 0:
       return "purple";
     case 1:
@@ -78,39 +81,39 @@ function transformarNumeroAColor(numero) {
     case 3:
       return "yellow";
   }
-}
+};
 
 //funcion de elegir le color
-const elegirColor = (ev) => {
+const userColorClick = (onClick) => {
   //juego inactivo, regresamos
-  if (nivel === -1) return;
+  if (levels === -1) return;
 
-  // recupera el nombre del color activo
-  const nombreColor = ev.target.dataset.color;
-  // averiguamos su posición
-  const numeroColor = transformarColorANumero(nombreColor);
+  // recupera el nombre del color activo en base al data-color (html)
+  const chosenColor = onClick.target.dataset.color;
+  // averiguamos su posición segun el switch case.
+  const caseColor = colorToNumber(chosenColor);
   // mostramos el color en pantalla para confirmar la lectura
-  iluminarColor(nombreColor);
+  glowUpPattern(chosenColor);
 
-  //Si el boton presionado corresponde al de la secuencia
-  if (numeroColor === secuencia[subnivel]) {
+  //Si el boton presionado corresponde al de la sequence
+  if (caseColor === sequence[sublevels]) {
     //siguiente secuencia
-    subnivel++;
+    sublevels++;
 
     //si no hay secuencia pasamos al siguiente level
-    if (subnivel > nivel) {
+    if (sublevels > levels) {
       //next level
-      nivel++;
+      levels++;
 
-      //si llegamos la final del juego
-      if (nivel === ultimo) {
+      //si pasamos al final stage.
+      if (levels === stages) {
         alert("You Wins!!!");
         endGame();
       } else {
         //reseteamos para que la proxima vez valida desde inicio de secuencia.
-        subnivel = 0;
+        sublevels = 0;
         // mostramos la siguiente secuencia
-        setTimeout(iluminarSecuencia, esperaMedia);
+        setTimeout(lightUpPattern, mediumWait);
       }
     }
   } else {
@@ -120,13 +123,13 @@ const elegirColor = (ev) => {
 };
 
 //interaccion con User
-colores.purple.addEventListener("click", elegirColor);
-colores.greenyellow.addEventListener("click", elegirColor);
-colores.palevioletred.addEventListener("click", elegirColor);
-colores.yellow.addEventListener("click", elegirColor);
+colorsChoise.purple.addEventListener("click", userColorClick);
+colorsChoise.greenyellow.addEventListener("click", userColorClick);
+colorsChoise.palevioletred.addEventListener("click", userColorClick);
+colorsChoise.yellow.addEventListener("click", userColorClick);
 
 //recuperar la posicion por medio del color indicado
-function transformarColorANumero(color) {
+const colorToNumber = (color) => {
   switch (color) {
     case "purple":
       return 0;
@@ -137,7 +140,7 @@ function transformarColorANumero(color) {
     case "yellow":
       return 3;
   }
-}
+};
 
 /*
 //Sound for button
