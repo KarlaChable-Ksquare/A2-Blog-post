@@ -8,22 +8,23 @@ const colorsChoise = {
 };
 
 /* SOUND */
-/*const cargarSonido = function (fuente) {
-  const sonido = document.createElement("audio");
-  sonido.src = fuente;
-  sonido.setAttribute("preload", "auto");
-  sonido.setAttribute("controls", "none");
-  sonido.style.display = "none";
-  document.body.appendChild(sonido);
-  return sonido;
+const uploadSound = function (fuente) {
+  const sound = document.createElement("audio");
+  sound.src = fuente;
+  sound.setAttribute("preload", "auto");
+  sound.setAttribute("controls", "none");
+  sound.style.display = "none";
+  document.body.appendChild(sound);
+  return sound;
 };
 
-const sonidoSuperiorIzquierda = cargarSonido("./media/simonSound1.mp3"),
-  sonidoSuperiorDerecha = cargarSonido("./media/simonSound2.mp3"),
-  sonidoInferiorIzquierda = cargarSonido("./media/simonSound3.mp3"),
-  sonidoInferiorDerecha = cargarSonido("./media/simonSound4.mp3");*/
+const soundPurple = uploadSound("./media/simonSound1.mp3"),
+  soundGreenyellow = uploadSound("./media/simonSound2.mp3"),
+  soundPalevioletred = uploadSound("./media/simonSound3.mp3"),
+  soundYellow = uploadSound("./media/simonSound4.mp3");
 
 //Sound for button
+
 //button start
 let soundStart = document.querySelector(".startBtn");
 soundStart.addEventListener("click", function () {
@@ -32,6 +33,7 @@ soundStart.addEventListener("click", function () {
   tagAudio.play();
 });
 
+/*
 //button purple
 let soundPurple = document.querySelector("#purple");
 soundPurple.addEventListener("click", function () {
@@ -63,6 +65,7 @@ soundYellow.addEventListener("click", function () {
   tagAudio.setAttribute("src", "./media/simonSound4.mp3");
   tagAudio.play();
 });
+*/
 
 //whitch color was choosen
 const numberToColor = (index) => {
@@ -103,12 +106,25 @@ const endGame = () => {
 const hideColor = 350;
 const waiting = 600;
 const mediumWait = 1200;
+let colorSound;
 
 const lightUpPattern = async () => {
   for (let index = 0; index <= levels; index++) {
     const color = numberToColor(sequence[index]);
     setTimeout(() => glowUpPattern(color), waiting * index);
     console.log(color);
+
+    if (color === "purple") {
+      colorSound = soundPurple;
+    } else if (color === "greenyellow") {
+      colorSound = soundGreenyellow;
+    } else if (color === "yellow") {
+      colorSound = soundYellow;
+    } else {
+      colorSound = soundPalevioletred;
+    }
+    colorSound.currentTime = 0;
+    await colorSound.play();
   }
 };
 
