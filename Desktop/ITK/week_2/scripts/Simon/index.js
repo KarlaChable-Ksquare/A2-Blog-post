@@ -7,6 +7,63 @@ const colorsChoise = {
   yellow,
 };
 
+/* SOUND */
+/*const cargarSonido = function (fuente) {
+  const sonido = document.createElement("audio");
+  sonido.src = fuente;
+  sonido.setAttribute("preload", "auto");
+  sonido.setAttribute("controls", "none");
+  sonido.style.display = "none";
+  document.body.appendChild(sonido);
+  return sonido;
+};
+
+const sonidoSuperiorIzquierda = cargarSonido("./media/simonSound1.mp3"),
+  sonidoSuperiorDerecha = cargarSonido("./media/simonSound2.mp3"),
+  sonidoInferiorIzquierda = cargarSonido("./media/simonSound3.mp3"),
+  sonidoInferiorDerecha = cargarSonido("./media/simonSound4.mp3");*/
+
+//Sound for button
+//button start
+let soundStart = document.querySelector(".startBtn");
+soundStart.addEventListener("click", function () {
+  let tagAudio = document.createElement("audio");
+  tagAudio.setAttribute("src", "./media/simonClick.mp3");
+  tagAudio.play();
+});
+
+//button purple
+let soundPurple = document.querySelector("#purple");
+soundPurple.addEventListener("click", function () {
+  let tagAudio = document.createElement("audio");
+  tagAudio.setAttribute("src", "./media/simonSound1.mp3");
+  tagAudio.play();
+});
+
+//button greenyellow
+let soundGreenyellow = document.querySelector("#greenyellow");
+soundGreenyellow.addEventListener("click", function () {
+  let tagAudio = document.createElement("audio");
+  tagAudio.setAttribute("src", "./media/simonSound2.mp3");
+  tagAudio.play();
+});
+
+//button palevioletred
+let soundPalevioletred = document.querySelector("#palevioletred");
+soundPalevioletred.addEventListener("click", function () {
+  let tagAudio = document.createElement("audio");
+  tagAudio.setAttribute("src", "./media/simonSound3.mp3");
+  tagAudio.play();
+});
+
+//button yellow
+let soundYellow = document.querySelector("#yellow");
+soundYellow.addEventListener("click", function () {
+  let tagAudio = document.createElement("audio");
+  tagAudio.setAttribute("src", "./media/simonSound4.mp3");
+  tagAudio.play();
+});
+
 //whitch color was choosen
 const numberToColor = (index) => {
   if (index === 0) return "purple";
@@ -47,10 +104,11 @@ const hideColor = 350;
 const waiting = 600;
 const mediumWait = 1200;
 
-const lightUpPattern = () => {
+const lightUpPattern = async () => {
   for (let index = 0; index <= levels; index++) {
     const color = numberToColor(sequence[index]);
     setTimeout(() => glowUpPattern(color), waiting * index);
+    console.log(color);
   }
 };
 
@@ -123,18 +181,7 @@ colorsChoise.greenyellow.addEventListener("click", userColorClick);
 colorsChoise.palevioletred.addEventListener("click", userColorClick);
 colorsChoise.yellow.addEventListener("click", userColorClick);
 
-/*
-//Sound for button
-//buttonBegin
-let soundB = document.querySelector(".soundB");
-soundB.addEventListener("click", function () {
-  let tagAudio = document.createElement("audio");
-  tagAudio.setAttribute("src", "./media/simonClick.mp3");
-  tagAudio.play();
-});
-
-
-const loadSound = function (fuente) {
+/*const loadSound = function (fuente) {
   const sound = document.createElement("audio");
   sound.src = fuente;
   sound.setAttribute("preload", "auto");
@@ -143,38 +190,4 @@ const loadSound = function (fuente) {
   document.body.section.appendChild(sound);
   return sound;
 };
-const sound01 = loadSound("./media/simonSound1.mp3");
-
-//button1
-let sound1 = document.querySelector(".sound1");
-sound1.addEventListener("click", function () {
-  let tagAudio = document.createElement("audio");
-  tagAudio.setAttribute("src", "./media/simonSound1.mp3");
-  tagAudio.play();
-});
-
-//button2
-let sound2 = document.querySelector(".sound2");
-sound2.addEventListener("click", function () {
-  let tagAudio = document.createElement("audio");
-  tagAudio.setAttribute("src", "./media/simonSound2.mp3");
-  tagAudio.play();
-});
-
-//button3
-let sound3 = document.querySelector(".sound3");
-sound3.addEventListener("click", function () {
-  let tagAudio = document.createElement("audio");
-  tagAudio.setAttribute("src", "./media/simonSound3.mp3");
-  tagAudio.play();
-});
-
-//button4
-let sound4 = document.querySelector(".sound4");
-sound4.addEventListener("click", function () {
-  let tagAudio = document.createElement("audio");
-  tagAudio.setAttribute("src", "./media/simonSound4.mp3");
-  tagAudio.play();
-});
-
-*/
+const sound01 = loadSound("./media/simonSound1.mp3");*/
