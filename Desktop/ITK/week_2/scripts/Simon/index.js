@@ -71,7 +71,12 @@ const turnOffPattern = (color) => {
 
 //recuperar el color utilizando la posicion indicada
 const numberToColor = (index) => {
-  switch (index) {
+  if (index === 0) return "purple";
+  if (index === 1) return "greenyellow";
+  if (index === 2) return "paleviolet";
+  if (index === 3) return "yellow";
+
+  /*switch (index) {
     case 0:
       return "purple";
     case 1:
@@ -80,7 +85,7 @@ const numberToColor = (index) => {
       return "palevioletred";
     case 3:
       return "yellow";
-  }
+  }*/
 };
 
 //funcion de elegir le color
@@ -130,7 +135,12 @@ colorsChoise.yellow.addEventListener("click", userColorClick);
 
 //recuperar la posicion por medio del color indicado
 const colorToNumber = (color) => {
-  switch (color) {
+  if (color === "purple") return 0;
+  if (color === "greenyellow") return 1;
+  if (color === "palevioletred") return 2;
+  if (color === "yellow") return 3;
+
+  /*switch (color) {
     case "purple":
       return 0;
     case "greenyellow":
@@ -139,7 +149,7 @@ const colorToNumber = (color) => {
       return 2;
     case "yellow":
       return 3;
-  }
+  }*/
 };
 
 /*
