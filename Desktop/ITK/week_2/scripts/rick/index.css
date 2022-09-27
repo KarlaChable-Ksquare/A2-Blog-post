@@ -1,0 +1,75 @@
+/*
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+html {
+  background-color: rgb(41, 41, 41);
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+main.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+section.character {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 150px;
+  margin: 10px;
+  border: 1px solid rgb(41, 41, 41);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+section.character * {
+  color: white;
+}
+
+div.c-details {
+  padding-left: 20px;
+  display: grid;
+  justify-self: start;
+  align-self: center;
+}
+
+div.c-details-up,
+div.c-details-mid,
+div.c-details-down {
+  padding: 6px 0px;
+}
+
+.c-img {
+  width: 150px;
+  height: 150px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+p.d-name {
+  font-weight: bolder;
+  font-size: large;
+}
+
+p.atribute {
+  font-weight: lighter;
+  font-size: small;
+}
+
+p.a-name {
+  font-weight: normal;
+  font-size: medium;
+}
