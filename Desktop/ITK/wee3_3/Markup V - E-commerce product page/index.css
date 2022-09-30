@@ -1,0 +1,12 @@
+img.user {
+  width: 65px;
+  height: 65px;
+}
+
+img.ph {
+  height: 100px;
+}
+
+button {
+  cursor: pointer;
+}
