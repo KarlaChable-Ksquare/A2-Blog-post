@@ -126,16 +126,17 @@ clear.addEventListener("click", function () {
   console.log(clickCount);
   render(buildEmptyGrid());
 
-  if (clickCount === 1) {
-    clickCount = 0;
-  }
-
+  genText();
   started = false;
   stoped = true;
 
+  /*if (clickCount === 1) {
+    clickCount = 0;
+  }
+
   if ((started = false)) {
     return (acountGen = 0);
-  }
+  }*/
 
   //requestAnimationFrame(update);
   // Each frame update, rewrites the grid with the values of the grid's next generation
@@ -229,36 +230,52 @@ function nextGeneration(grid) {
         // becomes a live cell, as if by reproduction.
         nextGeneration[col][row] = 1;
       }
+      /*
       if (nextGeneration[col][row] === 1) {
         arrVivo.push(nextGeneration[col][row]);
       }
+      */
     }
   }
   /* No olvidar que debe detenerse tambien cuando haya pausa en el juego */
   acountGen++;
   genText();
-  //console.warn("Next Generation");
-  //console.log(`The Gen is ${acountGen}`);
   /*
+   //console.warn("Next Generation");
+  //console.log(`The Gen is ${acountGen}`);
+ 
   let losVivos = arrVivo.reduce(function (a, b) {
     return a + b;
   });
-  */
+ 
   //console.log(`los vivos son ${losVivos}`);
   //console.log(`nextG ${nextGeneration}`); //array TF
+ */
+
   return nextGeneration; //array con cells V o M.
 }
 
 function genText() {
-  document.querySelector(
-    ".info-gen"
-  ).textContent = `Have passed ${acountGen} generations`;
-
-  document.querySelector(".ico-gen").setAttribute("src", "./image/pato.png");
+  //tratar de meter condicion para el cleaner
+  if (clickCount >= 1) {
+    document.querySelector(".info-gen").textContent = "You kill everyones!";
+    document
+      .querySelector(".ico-gen")
+      .setAttribute("src", "./image/nuclear.png");
+    return (clickCount = 0);
+  } else {
+    document.querySelector(
+      ".info-gen"
+    ).textContent = `Have passed ${acountGen} generations`;
+    document.querySelector(".ico-gen").setAttribute("src", "./image/pato.png");
+    return (clickCount = 0);
+  }
 }
 
+/*
 function cellText() {
   document.querySelector(
     ".info-cell"
   ).textContent = `Are alive ${accCell} cells`;
 }
+*/
