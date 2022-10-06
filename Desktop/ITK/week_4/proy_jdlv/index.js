@@ -120,30 +120,32 @@ random.addEventListener("click", function () {
   }
 });
 
+clickCount = 0;
 clear.addEventListener("click", function () {
+  clickCount++; //contador clears
+  console.log(clickCount);
   render(buildEmptyGrid());
-  started = false;
 
-  // Give life to the game animation
-  /*
-  function Animation(clock) {
-    if (!started) started = clock;
-    var progress = clock - started;
-    if (progress < 1000) {
-      console.log(progress);
-      window.requestAnimationFrame(Animation);
-    }
+  if (clickCount === 1) {
+    clickCount = 0;
   }
-  window.requestAnimationFrame(Animation);
-  */
-  requestAnimationFrame(update);
 
+  started = false;
+  stoped = true;
+
+  if ((started = false)) {
+    return (acountGen = 0);
+  }
+
+  //requestAnimationFrame(update);
   // Each frame update, rewrites the grid with the values of the grid's next generation
+  /*
   function update() {
     grid = nextGeneration(grid);
     render(grid);
     requestAnimationFrame(update);
   }
+  */
 });
 
 /* ==================================  GAME LOGIC  ================================== */
@@ -237,9 +239,11 @@ function nextGeneration(grid) {
   genText();
   //console.warn("Next Generation");
   //console.log(`The Gen is ${acountGen}`);
+  /*
   let losVivos = arrVivo.reduce(function (a, b) {
     return a + b;
   });
+  */
   //console.log(`los vivos son ${losVivos}`);
   //console.log(`nextG ${nextGeneration}`); //array TF
   return nextGeneration; //array con cells V o M.
