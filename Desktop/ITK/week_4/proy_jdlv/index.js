@@ -115,6 +115,7 @@ stop.addEventListener("click", function () {
 // Later throughout the game, we can modify the grid with the randomize and clear buttons
 random.addEventListener("click", function () {
   render(buildRandomGrid());
+  genText();
   if (started) {
     requestAnimationFrame(randUpdate);
   }
