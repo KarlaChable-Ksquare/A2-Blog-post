@@ -255,8 +255,8 @@ function nextGeneration(grid) {
   return nextGeneration; //array con cells V o M.
 }
 
+//Texto de Generaciones
 function genText() {
-  //tratar de meter condicion para el cleaner
   if (clickCount >= 1) {
     document.querySelector(".info-gen").textContent = "You kill everyones!";
     document
