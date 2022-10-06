@@ -86,6 +86,7 @@ function randUpdate() {
   randGrid = nextGeneration(randGrid);
   render(randGrid);
   reqAnimation = requestAnimationFrame(randUpdate);
+  play.classList.add("hideIt");
 }
 
 play.addEventListener("click", function () {
@@ -93,6 +94,10 @@ play.addEventListener("click", function () {
   reqAnimation = requestAnimationFrame(randUpdate);
   started = true;
   stoped = false;
+
+  if (stoped === false) {
+    stop.classList.remove("hideIt");
+  }
 });
 
 // stop button.
@@ -100,10 +105,13 @@ stop.addEventListener("click", function () {
   cancelAnimationFrame(reqAnimation);
   started = false;
   stoped = true;
+
+  if ((stoped = true)) {
+    play.classList.remove("hideIt");
+    stop.classList.add("hideIt");
+  }
 });
 
-//play.classList.remove("hideIt");
-//stop.classList.add("hideIt");
 // Later throughout the game, we can modify the grid with the randomize and clear buttons
 random.addEventListener("click", function () {
   render(buildRandomGrid());
