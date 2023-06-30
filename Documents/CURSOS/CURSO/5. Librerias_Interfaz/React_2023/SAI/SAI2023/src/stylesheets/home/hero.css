@@ -1,0 +1,28 @@
+.hero-welcome {
+  background-image: url('../../assets/home//welcomeorange.png');
+  background-size: cover;
+  height: 400px;
+  width: 560px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-welcome {
+    background-image: url('../../assets/home/welcome-dark.png');
+    background-size: cover;
+    height: 400px;
+    width: 560px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .hero-welcome {
+      height: 280px;
+      width: 360px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-welcome {
+    display: none;
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "_uid": "001",
+    "title": "Directorio",
+    "description": "Accede a la informacion de contacto de los departamemtos del IEPAC",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "/directorio",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "002",
+    "title": "IEPAC APP",
+    "description": "2 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "003",
+    "title": "IEPAC APP",
+    "description": "3 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "004",
+    "title": "IEPAC APP",
+    "description": "4 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "005",
+    "title": "IEPAC APP",
+    "description": "5 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "006",
+    "title": "IEPAC APP",
+    "description": "6 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "007",
+    "title": "IEPAC APP",
+    "description": "7 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  },
+  {
+    "_uid": "008",
+    "title": "IEPAC APP",
+    "description": "8 Este es un ejemplo de Aplicacion",
+    "img": "https://www.iepac.mx/2019/assets/img/logo.png",
+    "link": "https://www.iepac.mx/",
+    "background": "https://www.iepac.mx/2019/assets/img/logo.png"
+  }
+]

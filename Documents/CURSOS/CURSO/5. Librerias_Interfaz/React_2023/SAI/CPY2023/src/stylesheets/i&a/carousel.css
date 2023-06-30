@@ -1,0 +1,34 @@
+.carousel {
+  padding-block: min(20vh, 1rem);
+}
+
+.carousel .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.carousel .swiper .swiper-wrapper .swiper-slide-prev iframe,
+.carousel .swiper .swiper-wrapper .swiper-slide-next iframe {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.carousel .swiper-button-next,
+.carousel .swiper-button-prev {
+  color: #55a294;
+}
+
+.carousel .swiper-pagination {
+  position: static;
+  padding-top: 0.5rem;
+}
+
+.carousel .swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: #55a294;
+}

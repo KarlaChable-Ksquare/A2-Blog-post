@@ -1,0 +1,66 @@
+.carousel {
+  padding-block: min(20vh, 1rem);
+  background-color: #c6eae1;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.carousel .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+}
+
+.carousel .swiper .swiper-wrapper .swiper-slide-prev iframe,
+.carousel .swiper .swiper-wrapper .swiper-slide-next iframe {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.carousel .swiper-pagination {
+  position: static;
+  padding-top: 0.5rem;
+}
+
+.carousel .swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: #55a294;
+}
+
+.carousel .swiper-button-next,
+.carousel .swiper-button-prev {
+  color: #55a294;
+}
+
+.carousel .swiper-button-next:hover,
+.carousel .swiper-button-prev:hover {
+  background-color: #6bcbb8;
+  color: #fff;
+}
+
+@media only screen and (min-width: 256px) and (max-width: 512px) {
+  .carousel .swiper-pagination {
+    display: none;
+  }
+
+  .carousel .swiper div.swiper-button-prev {
+    margin-top: 0.5rem;
+    position: absolute;
+  }
+
+  .carousel .swiper div.swiper-button-next {
+    margin-top: 0.5rem;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 513px) and (max-width: 768px) {
+  .carousel .swiper-button-next,
+  .carousel .swiper-button-prev {
+    background-color: transparent;
+  }
+}

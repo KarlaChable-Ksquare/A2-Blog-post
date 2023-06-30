@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@*": ["./src/*"]
+    },
+    "baseUrl": "./src",
+    "checkJs": true,
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  }
+}
